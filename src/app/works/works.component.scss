@@ -1,0 +1,72 @@
+@import "../shared/styles/base";
+@import "../shared/styles/fonts";
+@import "../shared/styles/variables";
+
+.nav {
+  width: 100%;
+  height: 60px;
+  padding-top: 10px;
+  font-family: $font;
+}
+
+ul {
+  height: 40px;
+  list-style: none;
+  display: flex;
+}
+
+li:focus {
+  outline: none;
+  background-color: $border;
+}
+
+.link {
+  display: inline-block;
+  height: 40px;
+  padding: 10px;
+  text-decoration: none;
+  color: $blue;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid $border;
+}
+
+.link:hover {
+  color: $blue_hover;
+}
+
+.link_home {
+  display: inline-block;
+  width: 160px;
+  color:$red;
+}
+
+.link_home:hover {
+  color: $red_hover;
+}
+
+.span {
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+  padding: 10px;
+  border-bottom: 1px solid $border;
+  color: $text_dark;
+}
+
+.home_page {
+  width: 100%;
+  height: 40px;
+   border-bottom: 1px solid $border;
+}
+
+.active {
+  color: $green;
+  border-left: 1px solid $border;
+  border-top: 1px solid $border;
+  border-right: 1px solid $border;
+  border-bottom: none;
+}
+.active:hover {
+  color: $green_hover;
+}

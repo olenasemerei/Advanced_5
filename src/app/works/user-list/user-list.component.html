@@ -1,0 +1,20 @@
+<section class="wrapper">
+  <div class="header">
+    <h2>User: {{ userName }}. Count of task {{ taskCount }}</h2>
+  </div>
+  <div class="container">
+    <input type="text" [(ngModel)]="taskName">
+    <button (click)="addTask()" class="button">Add</button>
+  </div>
+
+  <div>
+    <app-tabletask [newTask]="newTask" (countTask)="getCount($event)" (edit)="getIndex($event)">
+
+    </app-tabletask>
+  </div>
+
+  <div>
+    <input type="text" [(ngModel)]="newTaskName">
+    <button class="button" (click)="updateTask()">save</button>
+  </div>
+</section>

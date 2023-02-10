@@ -1,0 +1,20 @@
+@import "../../shared/styles/base";
+@import "../../shared/styles/fonts";
+@import "../../shared/styles/variables";
+
+.header {
+  width: 100vw;
+  height: $header_height;
+  font-family: $font;
+  color: $text_dark;
+  background-color: $background;
+  border: 1px solid $border;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+}

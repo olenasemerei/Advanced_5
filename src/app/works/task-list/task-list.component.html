@@ -1,0 +1,61 @@
+<section>
+  <p>Angular users task</p>
+  <div class="container">
+    <div class="containerSignUp">
+      <form name="f1" class="f1">
+        <label for="login">Login
+          <input type="text" name="login" placeholder="Enter login" [(ngModel)]="user.login"
+            [ngClass]="{'wrong': inputWrongLogin}">
+        </label>
+        <label for="password">Password
+          <input type="password" name="password" placeholder="Enter password" [(ngModel)]="user.password"
+            [ngClass]="{'wrong': inputWrongPassword}">
+        </label>
+        <label for="email">Email adress
+          <input type="email" name="email" placeholder="Enter email" [(ngModel)]="user.email"
+            [ngClass]="{'wrong': inputWrongEmail}">
+        </label>
+        <button type="button" name="addUserBtn" *ngIf="isButton" (click)="addUser()" class="button">Add user</button>
+        <button type="button" class="button editUserBtn" *ngIf="!isButton" (click)="saveEditUser()">
+          Save edit user
+        </button>
+      </form>
+
+    </div>
+
+    <div class="containerSignOut">
+      <div class="table">
+        <table>
+          <tr>
+            <th>#</th>
+            <th>Login</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+          <tbody id="tbody">
+            <tr *ngFor="let user of usersArray; let i=index">
+              <td>{{i+1}}</td>
+              <td>{{user.login}}</td>
+              <td>{{user.password}}</td>
+              <td>{{user.email}}</td>
+              <td>
+                <button type="button" class="editBtn" (click)="editUser(i)">
+                  Edit
+                </button>
+              </td>
+              <td>
+                <button type="button" class="deleteBtn" (click)="deleteUser(i)" [disabled]="!isButton">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>

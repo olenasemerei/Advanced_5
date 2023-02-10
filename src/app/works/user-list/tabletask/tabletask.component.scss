@@ -1,0 +1,56 @@
+@import '../../../shared/styles/base';
+@import '../../../shared/styles/fonts.scss';
+@import '../../../shared/styles/_variables.scss';
+
+
+table {
+  max-width: 1000px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  color: black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  min-width: 100px;
+  height: 40px;
+  text-align: center;
+  margin: 20px;
+}
+
+tr {
+  height: 64px;
+  margin: 20px;
+}
+
+.editBtn {
+  width: 60px;
+  height: 40px;
+  color: black;
+  text-align: center;
+  background: $yellow;
+  border: 1px solid $yellow_hover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  width: 70px;
+  height: 40px;
+  color: $text_white;
+  text-align: center;
+  background: $red;
+  border: 1px solid $red_hover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  background-color: $yellow_hover;
+}
+
+.deleteBtn:hover {
+  background-color: $red_hover;
+}

@@ -1,0 +1,68 @@
+@import "../../shared/styles/base";
+@import "../../shared/styles/fonts";
+@import "../../shared/styles//variables";
+
+.wrapper {
+  font-family: $font;
+  background: $background;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 60px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 60px;
+}
+
+.f1 {
+  margin: 0 auto;
+}
+
+input[type="text"] {
+  width: 600px;
+  height: 40px;
+  border: 1px solid $border;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+label {
+  margin: 20px;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+  color: $text_white;
+  text-align: center;
+  background: $green;
+  border: 1px solid $green_hover;
+  border-radius: 4px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 14px;
+  text-align: center;
+  margin: 6px;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px $green;
+}
+
+input:focus {
+  outline: none;
+  border-color: $blue;
+  box-shadow: 0 0 10px $blue_focus;
+}

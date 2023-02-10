@@ -1,0 +1,29 @@
+<nav class="nav">
+  <ul class="ul">
+    <li class="li">
+      <span class="span">Last work >>></span>
+    </li>
+    <li class="li">
+      <a href="#" class="link" [routerLink]="[ '/works/cenzor' ]" routerLinkActive="active">
+        Cenzor
+      </a>
+    </li>
+    <li class="li">
+      <a href="#" class="link" [routerLink]="[ '/works/task-list' ]" routerLinkActive="active">
+        Users
+      </a>
+    </li>
+    <li class="li">
+      <a href="#" class="link" [routerLink]="[ '/works/user-list' ]" routerLinkActive="active">
+        Task
+      </a>
+    </li>
+    <span class="home_page"></span>
+    <li class="li">
+      <a href="#" class="link_home" [routerLink]="[ '/home' ]">
+        Back to >>> Home
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

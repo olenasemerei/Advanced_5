@@ -1,0 +1,17 @@
+<section>
+  <form class="block" name="formWords">
+    <span>Bad words:</span>
+    <span class="wordsList" name="wordsList">{{badContent.join(', ')}}</span>
+  </form>
+  <form class="form" name="form">
+    <input name="inputWord" type="text" [class.border]='isEmpty' placeholder="{{wordHere}}" [(ngModel)]="badWord">
+    <button class="btnAdd" (click)="addBadWord()" name="btnAdd">Add</button>
+    <button class="btnReset" (click)="removeBadWord()" name="btnReset">Reset</button>
+  </form>
+
+  <form class="formCheck" name="formCheck">
+    <textarea name="text" class="textarea" [class.border]="isEmptyCenzor" placeholder="{{textHere}}"
+      [(ngModel)]="cenzorText"></textarea>
+    <button class="btnCenzor" (click)="cenzor()">Cenzor</button>
+  </form>
+</section>
